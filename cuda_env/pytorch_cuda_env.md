@@ -27,4 +27,24 @@ so the command would be `conda create -n env_name python=3.10.11`.
 
 
 ## 2. Cuda12 Setup  
+* Download the cuda12 from the [official website](https://developer.nvidia.com/cuda-12-0-0-download-archive).
+* Check if the path has been added to the system variable:  
+<img src="../image/torch_cuda/cuda.PNG">    
+* To test if Cuda12 and cuDNN have been installed successfully: run `nvcc --version`. Run `set cuda` to check the system 
+variable.
+* Download [cuDNN](https://developer.nvidia.com/rdp/cudnn-archive) with the associated version. 
+Copy three folders from the downloaded files(image 1), and paste them to the 'NVIDIA GPU Computing Toolkit\CUDA\v12.0'
+directory(image2).    
+<img src="../image/torch_cuda/cudnn_01.PNG">  
+<img src="../image/torch_cuda/cudnn_02.PNG">  
+* Add 4 paths to the system variable:  
+<img src="../image/torch_cuda/cuda_env_path.PNG">  
 
+
+## 3. Pytorch  
+Go to the [official website](https://pytorch.org/get-started/locally/), choose the correct version, and copy the 
+generated command. Run the command under the conda environment we set up earlier.   
+<img src="../image/torch_cuda/torch.PNG">
+
+To test if the torch-GPU is installed successfully:  
+<img src="../image/torch_cuda/torch_test.PNG">
