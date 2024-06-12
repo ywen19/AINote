@@ -15,7 +15,7 @@ The download page and beginner intro for conda is:
 
 Note that we need to add the absolute paths for conda to the environment variable(in case the installer failed to do 
 so); Below image is an example:    
-<img src="../image/torch_cuda/system_var.png">  
+<img src="../image/torch_cuda/system_var.PNG">  
 
 Commonly-used Commands:
 * `conda create -n` create a new environment；
