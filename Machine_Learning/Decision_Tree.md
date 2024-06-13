@@ -12,7 +12,7 @@ References:
 For continuous features, we need to first discrete the values before flushing the features into the training. Common 
 techniques can be seen from [Data Discretization](./discretization.md).  
 
-**Decision trees make decisions based on discrete attribute partitions, so if a feature is textual, we do 
+**Decision trees make decisions based on discrete attribute partitions, so if a feature is textual, we do
 not need to pre-process it to discrete numeric values.**   
 
 <mark>Decision-tree algorithms are known to be unstable: small variations in the training set can result in different 
@@ -33,7 +33,6 @@ Main operations in Decision Tree algorithm are:
 
 
 ---
-
 ## 3. Information Gain, Gain Ratio, Gini Impurity 
 
 ### 3.1 Entropy
@@ -74,7 +73,8 @@ def get_entropy(self, label: np.array) -> float:
 ```
 
 ### 3.2 Information Gain  
-ID3 chooses nodes that maximize the information gain to grow the tree
+
+ID3 chooses nodes that maximize the information gain to grow the tree 
 由于对A的排序整理带来的熵的期望减少量。  
 $$Gain(S,A)=Entropy(S)-\sum_{v \in Values(A)}^{} \frac{|S_{v}|}{|S|}Entropy(S_{v})$$    
 等式右边第一项为“原始S的熵值”，第二项为“属性A分类以后得期望熵值”。  
