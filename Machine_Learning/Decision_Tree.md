@@ -16,7 +16,18 @@ techniques can be seen from [Data Discretization](./discretization.md).
 not need to pre-process it to discrete numeric values.**   
 
 <mark>Decision-tree algorithms are known to be unstable: small variations in the training set can result in different 
-trees and different predictions for the same validation examples</mark>
+trees and different predictions for the same validation examples.</mark>
+
+Train time complexity:
+$$O(n * log(n) * d)$$   
+$$n: data points, d: dimensions$$  
+Train space complexity:
+$$O(nodes)$$  
+
+Test time complexity:
+$$O(depth)$$   
+Train space complexity:
+$$O(nodes)$$  
 
 ---
 ## 2. Definition
@@ -122,6 +133,7 @@ will tend to use this feature to grow a tree with too many branches, and easily 
 classification makes no sense). E.g. If we use the 'Day' as a feature(image in section 3.2), then the information gain 
 of each 'Day No.' could easily exceed all the other features, whilst day information is meaningless to make a 
 classification decision.  
+我们也可以将以上的偏差泛化为：IG会优先选择有很多属性取值的feature。
 
 The solution to the above issue is to punish if a tree has too many branches. That is the reason for using gain ratio, 
 instead of information gain.  
@@ -215,6 +227,8 @@ There are pre-pruning and post-pruning.
 Pre-pruning: If the splitting is not statistically significant, stop the tree from growing;  
 Post-pruning: Construct a tree and then prune branches.  
 
+Generally speaking, pre-pruning is faster on speed whilst post-pruning is more accurate on the decision-making.
+
 ### Pre-pruning
 <b>Type 1:</b>  
 * 当一个节点的训练样本数小于训练集合的一个特定比例（例如5%,就是一个阈值）
@@ -241,3 +255,6 @@ Cost complexity pruning (post-pruning) steps:
 4. <mark>CART Regression Code</mark>
 5. Random Forest (mentioned in Bagging later)
 6. [Post Pruning Implementation](https://www.kdnuggets.com/2022/09/decision-tree-pruning-hows-whys.html)
+7. C5.0
+8. [Cost-Sensitive Decision Trees for Imbalanced Classification](https://machinelearningmastery.com/cost-sensitive-decision-trees-for-imbalanced-classification/)  
+9. [决策树python源码实现（含预剪枝和后剪枝）] (https://blog.csdn.net/ylhlly/article/details/93213633)
