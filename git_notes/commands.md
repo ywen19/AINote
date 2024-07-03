@@ -29,7 +29,7 @@ One could also use the commit number such as `git rebase -i a5f4a0d`；
 8. `git reset`回滚；  
 <img src="../image/git/reset.PNG">  
 和`rebase -i`一样，可以用`Head^`也可以直接使用commit编号。
-9. `git log` 查看git历史的方式
+9. `git log` 查看git历史的方式  
 10. `git branch -D branch_name`本地删除branch, `git push remote_name(e.g. origin) -d remote_branch_name`删除remote上的分支。
 11. 使用proxy时的git config(如果太慢)：
     * 首先需要注意的是不一定这样配置proxy后一定有用;
