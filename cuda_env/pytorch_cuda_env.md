@@ -47,4 +47,40 @@ generated command. Run the command under the conda environment we set up earlier
 <img src="../image/torch_cuda/torch.PNG">
 
 To test if the torch-GPU is installed successfully:  
-<img src="../image/torch_cuda/torch_test.PNG">
+<img src="../image/torch_cuda/torch_test.PNG">   
+
+
+# Pytorch Cuda Environment Setup(NCCA) and Linux Bash  
+## 1. Linux Bash
+Some bash settings for logging in:  
+
+`touch ~/.profile` the dot suggests a hidden file, normally configuration files. We difine commands that runs everytime when log in in this file, so these are essentially login prompt.  
+
+`source ~/.profile` refresh with updated profile.   
+
+`mv ~/.profile ~/.bash_profile` rename profile to bash_profile just in case the previous few steps not working due to the system not reading the profile. There can be also because the system is reading bashrc only so that we can also do `mv ~/.bash_profile ~/.bashrc`.  
+In above file:  
+`export PS1="[\u@\h \W]\$"`  
+`\u`: user, `@\h`: at current host, `\W`: current desktop;  
+
+In terminal -> pref -> command, enable "run command as a login shell".  
+
+## 2. PyEnv and Anaconda
+There is a shell script(install_python.sh) provided by the department(usual install could follow the official git repo).  
+
+The shell script builds the pyenv at `.pyenv/`, use `python -V` for querying version.   
+`pyenv versions` for querying python versions installed on the local machine; `pyenv version` is the current python version.  
+
+`pyenv install --list` lists the python and modules that can be installed.    
+`pyenv install --list | rg anacon`: list with softwares with anacon(for more accurate research); `|` is for joint commands.  
+
+### Install anaconda with PyEnv  
+`pyenv install anaconda3-2024.06-1`(or whichever version needed).  
+
+
+
+
+
+
+
+
