@@ -80,7 +80,14 @@ The shell script builds the pyenv at `.pyenv/`, use `python -V` for querying ver
 `pyenv global anaconda3-2024.06-1` goes into the anaconda env.  
 
 
-
+# Pytorch Cuda Environment Setup on Windows with Pyenv-Win
+1. Install pyenv from power shell. [See instruction](https://github.com/pyenv-win/pyenv-win).
+   Make sure the system variable is added.
+2. Go to `~/.pyenv/pyenv-win/versions` and manually use the anaconda installer to install the conda in such folder.
+   If the pyenc has already defined a local or global version, one can choose to install anaconda with such settings. Do not add anaconda to the environment variable path since it may conflict with the pyenv.
+3. Open anaconda prompt and `conda init powershell` to enable conda commands in windows powershell. 
+4. Reopen powershell, `pyenv local anaconda3`(anaconda3 can be changed based on the conda you installed, e.g.miniconda).
+5. The above steps should enable conda in powershell and alongside pyenv. Can use conda-executable programs such as `jupyter notebook` and any other conda commands to test if the configuration works.
 
 
 
