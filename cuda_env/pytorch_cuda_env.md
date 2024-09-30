@@ -69,13 +69,16 @@ In terminal -> pref -> command, enable "run command as a login shell".
 There is a shell script(install_python.sh) provided by the department(usual install could follow the official git repo).  
 
 The shell script builds the pyenv at `.pyenv/`, use `python -V` for querying version.   
-`pyenv versions` for querying python versions installed on the local machine; `pyenv version` is the current python version.  
+`pyenv versions` for querying software versions installed on the local machine; `pyenv version` is the current python version.  
 
 `pyenv install --list` lists the python and modules that can be installed.    
 `pyenv install --list | rg anacon`: list with softwares with anacon(for more accurate research); `|` is for joint commands.  
 
 ### Install anaconda with PyEnv  
-`pyenv install anaconda3-2024.06-1`(or whichever version needed).  
+`pyenv install anaconda3-2024.06-1`(or whichever version needed).   
+
+`pyenv global anaconda3-2024.06-1` goes into the anaconda env.  
+
 
 
 
