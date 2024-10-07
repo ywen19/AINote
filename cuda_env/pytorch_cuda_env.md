@@ -79,6 +79,8 @@ The shell script builds the pyenv at `.pyenv/`, use `python -V` for querying ver
 
 `pyenv global anaconda3-2024.06-1` goes into the anaconda env.  
 
+`jupyter-qtconsole &` could open the conda console in which both terminal command and python commands could be used. 
+
 
 # Pytorch Cuda Environment Setup on Windows with Pyenv-Win
 1. Install pyenv from power shell. [See instruction](https://github.com/pyenv-win/pyenv-win).
