@@ -48,3 +48,5 @@ One could also use the commit number such as `git rebase -i a5f4a0d`；
     检查是否成功取消proxy配置:  
     `git config --global -l` 输出不应该有任何以`http.proxy=`或`https.proxy=`开头的列表元素。
     * 如果上面的命令行取消proxy设置失败了，则手动进入<mark>`C:\Users\user_name\.gitconfig`</mark>并删除掉`http.proxy=`或`https.proxy=`开头的配置。
+   
+12. `git branch -M main` makes the master branch as main. This is a new protocol.
